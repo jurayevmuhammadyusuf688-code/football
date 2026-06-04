@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title>FOOTBALL LEGACY | Manga World Cup</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght=14..32,300;14..32,400;14..32,600;14..32,700;14..32,800&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="shortcut icon" href="./image.png" type="image/x-icon">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="loading-screen" id="loadingScreen">
+  <div class="loader-football"><i class="fas fa-futbol"></i></div>
+  <h3 class="loading-text">KICK OFF LEGACY...</h3>
+</div>
+
+<div class="main-content" style="display: none;">
+  <canvas id="particle-canvas"></canvas>
+
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="logo"><i class="fas fa-futbol"></i> LEGACY FC</div>
+      
+      <ul class="nav-links">
+        <li><a href="#home">HOME</a></li>
+        <li><a href="#worldcup">WORLD CUP</a></li>
+        <li><a href="#legends">LEGENDS</a></li>
+        <li><a href="#matches">LIVE</a></li>
+        <li><a href="#news">NEWS</a></li>
+        <li><a href="#rankings">RANKINGS</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button id="themeToggle" class="nav-btn" aria-label="Toggle Theme">
+          <i class="fas fa-moon"></i>
+        </button>
+        <button id="menuToggle" class="nav-btn mobile-menu-btn" aria-label="Open Menu">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <h1>THE WORLD OF FOOTBALL</h1>
+      <p style="font-size: 1.3rem; margin: 20px 0;">FIFA World Cup <i class="fas fa-circle" style="font-size:0.4rem; vertical-align:middle; margin:0 8px; color:var(--neon-blue);"></i> Legendary Aces <i class="fas fa-circle" style="font-size:0.4rem; vertical-align:middle; margin:0 8px; color:var(--neon-green);"></i> Manga Intensity</p>
+      <div class="hero-buttons">
+        <button class="glow-btn" id="exploreBtn">EXPLORE NOW <i class="fas fa-angle-right"></i></button>
+        <button class="glow-btn" id="watchTrailer">WATCH HIGHLIGHTS <i class="fas fa-play"></i></button>
+      </div>
+    </div>
+  </section>
+
+  <section id="worldcup">
+    <h2 class="section-title"><i class="fas fa-trophy"></i> WORLD CUP CHRONICLES</h2>
+    <div class="cards-grid" id="worldcupGrid"></div>
+  </section>
+
+  <section id="legends">
+    <h2 class="section-title"><i class="fas fa-user-astronaut"></i> LEGENDARY PLAYERS</h2>
+    
+    <div class="local-search-wrapper">
+      <div class="local-search-box">
+        <i class="fas fa-search local-search-icon"></i>
+        <input type="text" id="playerLocalSearchInput" placeholder="Search players by name, nation, or achievements...">
+      </div>
+    </div>
+
+    <div class="cards-grid" id="playersGrid"></div>
+  </section>
+
+  <section id="matches">
+    <h2 class="section-title"><i class="fas fa-tv"></i> LIVE MATCH SIMULATION</h2>
+    <div class="match-scoreboard">
+      <div style="display: flex; justify-content: space-around; align-items: center; flex-wrap: wrap; gap: 20px;">
+        <div class="team-display"><img src="https://flagsapi.com/AR/flat/64.png" width="50" alt="Argentina"> ARGENTINA</div>
+        <div style="font-size: 3rem; font-weight: bold;"><span id="scoreA">2</span> : <span id="scoreB">1</span></div>
+        <div class="team-display"><img src="https://flagsapi.com/FR/flat/64.png" width="50" alt="France"> FRANCE</div>
+      </div>
+      <div class="score-timer" id="matchTimer">45:00</div>
+      <div><button class="glow-btn" id="simulateGoalBtn"><i class="fas fa-bolt"></i> SIMULATE GOAL <i class="fas fa-bolt"></i></button></div>
+    </div>
+  </section>
+
+  <section id="news">
+    <h2 class="section-title"><i class="fas fa-newspaper"></i> FOOTBALL INSIDER</h2>
+    <div class="cards-grid" id="newsGrid"></div>
+  </section>
+
+  <section id="gallery">
+    <h2 class="section-title"><i class="fas fa-image"></i> MANGA MOMENTS</h2>
+    <div class="masonry" id="galleryMasonry"></div>
+  </section>
+
+  <section id="rankings">
+    <h2 class="section-title"><i class="fas fa-chart-line"></i> FIFA RANKINGS (LIVE COUNTER)</h2>
+    <div id="rankingsList"></div>
+  </section>
+
+  <section>
+    <h2 class="section-title"><i class="fas fa-comments"></i> FAN EXPERIENCE</h2>
+    <div class="cards-grid" id="fanComments"></div>
+  </section>
+
+  <footer>
+    <div style="text-align: center; max-width: 600px; margin: auto;">
+      <h3><i class="fas fa-envelope"></i> JOIN THE LEGION</h3>
+      <div class="subscribe-form">
+        <input type="email" placeholder="Your email" id="newsEmail">
+        <button class="glow-btn" id="subscribeBtn">Subscribe</button>
+      </div>
+      <div style="font-size: 2rem; display: flex; gap: 20px; justify-content: center; margin-bottom: 20px;">
+        <a href="#" class="social-link" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="social-link" aria-label="Discord"><i class="fab fa-discord"></i></a>
+        <a href="#" class="social-link" aria-label="Youtube"><i class="fab fa-youtube"></i></a>
+      </div>
+      <p style="margin-top: 20px; font-size: 0.9rem; opacity: 0.7;">&copy; 2026 FOOTBALL LEGACY &mdash; MANGA WORLD CUP EDITION</p>
+    </div>
+  </footer>
+  
+  <div class="audio-toggle" id="audioToggle">
+    <i class="fas fa-volume-up"></i>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
