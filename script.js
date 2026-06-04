@@ -58,9 +58,9 @@ const newsItems = [
 ];
 
 const galleryImages = [
-  "https://images.unsplash.com/photo-1518091043644-c2e5e0fd6542?w=400", "https://images.unsplash.com/photo-1522778119029-d647692128b0?w=400", 
-  "https://images.unsplash.com/photo-1459862105998-e4f9823be7d6?w=400", "https://images.unsplash.com/photo-1508096821946-55968e7302f3?w=400", 
-  "https://images.unsplash.com/photo-1543326727-cf6c39e8f84c?w=400"
+  "https://func-wolves-playmaker-imageresizer-prod-uksouth.azurewebsites.net/api/media/8370/bri-h-2.jpg", "https://editorial01.shutterstock.com/preview/12926585es/f0050660/Shutterstock_12926585es.jpg", 
+  "https://resources.premierleague.com/premierleague/photo/2018/01/20/eb9834ed-18e3-4100-83d1-e04666888d9e/2018-01-20T163008Z_288212614_RC158C79F9D0_RTRMADP_3_SOCCER-ENGLAND-EVE-WBA.JPG", "https://resources.premierleague.com/premierleague/photo/2018/01/20/eb9834ed-18e3-4100-83d1-e04666888d9e/2018-01-20T163008Z_288212614_RC158C79F9D0_RTRMADP_3_SOCCER-ENGLAND-EVE-WBA.JPG", 
+  "https://resources.premierleague.com/premierleague/photo/2019/03/02/23a0cbc0-23b7-44f1-9624-39b5ae1b3470/2019-03-02T164045Z_1025822779_RC133D0C3500_RTRMADP_3_SOCCER-ENGLAND-BRH-HDD.JPG", "https://resources.premierleague.com/premierleague/photo/2019/03/02/23a0cbc0-23b7-44f1-9624-39b5ae1b3470/2019-03-02T164045Z_1025822779_RC133D0C3500_RTRMADP_3_SOCCER-ENGLAND-BRH-HDD.JPG"
 ];
 
 const rankingsData = [
